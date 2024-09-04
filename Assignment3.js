@@ -1,18 +1,22 @@
-const inputField1 = Number(document.getElementById("C2F"));
-const inputField2 = Number(document.getElementById("F2C"));
-const button1 = document.getElementById(fahrenheitbutton);
-const button2 = document.getElementById(celsiusbutton);
- 
 
-button1, button2.addEventListener("click", function)
-temperatureConversion(){
-    if(button1){
-        let results1 = (inputField1 - 32) * 5/9; 
-        document.getElementById("results1");
+let scale = prompt("Do you want to convert from C or F?");
+let temp = prompt("Put a temperature");
 
-    }else if(button2){
-        let results2 = (inputField2 * 9/5) + 32;
-        document.getElementById("results2");
+function temperatureConversion(){
+    if(scale == "F"){
+        
+        let results = (temp - 32) * 5/9; 
+        console.log(results);
+        
+        document.write(results)
+    }else if(scale == "C"){
+   
+        let results = (temp * 9/5) + 32;
+        console.log(results);
+        document.write(results)
+        
+
     }
 
 }
+temperatureConversion()
